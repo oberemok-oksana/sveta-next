@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styles from "../styles/Home.module.css";
 
@@ -25,9 +26,9 @@ export default function Home() {
         </div>
         <ul className="navbar-list">
           <li className="navbar-list-item">
-            <a className="contacts" href="./pages/contacts.html">
-              contacts
-            </a>
+            <Link href="/contacts">
+              <a className="contacts">contacts</a>
+            </Link>
           </li>
         </ul>
       </header>
@@ -124,24 +125,24 @@ export default function Home() {
               />
             </a>
           </div>
-          {/* <div className="grid-item">
-              <a href="./pages/kiwa.html" target="_blank">
-                <video>
-                  <source
-                    src="/pictures/Kiwa_hirsuta_in_dirty_water.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </a>
-            </div>
-            <div className="grid-item">
-              <a href="./pages/wondershell_video.html" target="_blank">
-                <video>
-                  <source src="/pictures/Wondershell_V2.mov" type="video/mp4" />
-                </video>
-              </a>
-            </div> */}
+          <div className="grid-item">
+            <a href="./pages/kiwa.html" target="_blank">
+              <video>
+                <source
+                  src="/pictures/Kiwa_hirsuta_in_dirty_water.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/wondershell_video.html" target="_blank">
+              <video>
+                <source src="/pictures/Wondershell_V2.mov" type="video/mp4" />
+              </video>
+            </a>
+          </div>
         </Masonry>
       </ResponsiveMasonry>
       <footer className="footer">
