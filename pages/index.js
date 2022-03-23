@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -30,100 +31,119 @@ export default function Home() {
           </li>
         </ul>
       </header>
-      <main className="grid">
-        <div className="grid-item">
-          <a href="./pages/blue_crab.html" target="_blank">
-            <Image
-              id="blue_crab"
-              src="/pictures/Blue_crab_in_dirty_water.png"
-              alt="Blue crab in dirty water"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/deep_sea_crystal.html" target="_blank">
-            <Image
-              src="/pictures/Deep_sea_crystal.png"
-              alt="Deep sea crystal"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/codependency.html" target="_blank">
-            <Image
-              src="/pictures/Codependency_false_happiness.png"
-              alt="Codependency - false happiness"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/dragons_prayer.html" target="_blank">
-            <Image
-              src="/pictures/Dragons_prayer.png"
-              alt="Dragon's prayer"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/flight_to_freedom.html" target="_blank">
-            <Image
-              src="/pictures/Flight_to_freedom.png"
-              alt="Flight to freedom"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/turmoil.html" target="_blank">
-            <Image src="/pictures/Turmoil.png" alt="Turmoil" layout="fill" />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/shark.html" target="_blank">
-            <Image src="/pictures/Shark.png" alt="Shark" layout="fill" />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/supernova.html" target="_blank">
-            <Image
-              src="/pictures/Supernova.png"
-              alt="Supernova"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/wondershell.html" target="_blank">
-            <Image
-              src="/pictures/Wondershell.png"
-              alt="Wondershell"
-              layout="fill"
-            />
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/kiwa.html" target="_blank">
-            <video>
-              <source
-                src="/pictures/Kiwa_hirsuta_in_dirty_water.mp4"
-                type="video/mp4"
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 900: 3 }}>
+        <Masonry gutter="5px 10px">
+          <div className="grid-item">
+            <a href="./pages/blue_crab.html" target="_blank">
+              <Image
+                id="blue_crab"
+                src="/pictures/Blue_crab_in_dirty_water.png"
+                alt="Blue crab in dirty water"
+                width={4000}
+                height={2250}
               />
-              Your browser does not support the video tag.
-            </video>
-          </a>
-        </div>
-        <div className="grid-item">
-          <a href="./pages/wondershell_video.html" target="_blank">
-            <video>
-              <source src="/pictures/Wondershell_V2.mov" type="video/mp4" />
-            </video>
-          </a>
-        </div>
-      </main>
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/deep_sea_crystal.html" target="_blank">
+              <Image
+                src="/pictures/Deep_sea_crystal.png"
+                alt="Deep sea crystal"
+                width={2000}
+                height={2000}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/codependency.html" target="_blank">
+              <Image
+                src="/pictures/Codependency_false_happiness.png"
+                alt="Codependency - false happiness"
+                width={2048}
+                height={1080}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/dragons_prayer.html" target="_blank">
+              <Image
+                src="/pictures/Dragons_prayer.png"
+                alt="Dragon's prayer"
+                width={4096}
+                height={2160}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/flight_to_freedom.html" target="_blank">
+              <Image
+                src="/pictures/Flight_to_freedom.png"
+                alt="Flight to freedom"
+                width={2048}
+                height={1080}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/turmoil.html" target="_blank">
+              <Image
+                src="/pictures/Turmoil.png"
+                alt="Turmoil"
+                width={2000}
+                height={2000}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/shark.html" target="_blank">
+              <Image
+                src="/pictures/Shark.png"
+                alt="Shark"
+                width={1280}
+                height={720}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/supernova.html" target="_blank">
+              <Image
+                src="/pictures/Supernova.png"
+                alt="Supernova"
+                width={4000}
+                height={4000}
+              />
+            </a>
+          </div>
+          <div className="grid-item">
+            <a href="./pages/wondershell.html" target="_blank">
+              <Image
+                src="/pictures/Wondershell.png"
+                alt="Wondershell"
+                width={2000}
+                height={1500}
+              />
+            </a>
+          </div>
+          {/* <div className="grid-item">
+              <a href="./pages/kiwa.html" target="_blank">
+                <video>
+                  <source
+                    src="/pictures/Kiwa_hirsuta_in_dirty_water.mp4"
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </a>
+            </div>
+            <div className="grid-item">
+              <a href="./pages/wondershell_video.html" target="_blank">
+                <video>
+                  <source src="/pictures/Wondershell_V2.mov" type="video/mp4" />
+                </video>
+              </a>
+            </div> */}
+        </Masonry>
+      </ResponsiveMasonry>
       <footer className="footer">
         <div className="mailbox">sveta@gmail.com</div>
         <div className="socials">
