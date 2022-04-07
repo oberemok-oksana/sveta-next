@@ -105,7 +105,7 @@ const artWorks = [
   “Wonder” - illuminates that this process is filled with magic.
   `,
     link: "https://foundation.app/@bilyk/foundation/87904",
-    type: "mov",
+    type: "mp4",
   },
 ];
 

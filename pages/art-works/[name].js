@@ -1,7 +1,15 @@
 import Link from "next/link";
 import artWorks from "../../data/artWorks";
+import { useRef, useEffect } from "react";
 
 export default function ArtWork({ artWork }) {
+  const video = useRef();
+  useEffect(() => {
+    if (video.current) {
+      video.current.play();
+    }
+  }, []);
+
   if (!artWork) {
     return <div>ArtWork not found</div>;
   }
@@ -11,7 +19,14 @@ export default function ArtWork({ artWork }) {
       <header className="header">
         <div className="logo">
           <Link href="/">
-            <a className="main-header">Sveta Bilyk</a>
+            <a className="main-header">
+              {" "}
+              <img
+                className="logo-img"
+                src="/pictures/logo.svg"
+                alt="Logo Sveta Bylik"
+              />
+            </a>
           </Link>
         </div>
         <ul className="navbar-list">
@@ -30,13 +45,7 @@ export default function ArtWork({ artWork }) {
               alt={artWork.alt}
             />
           ) : (
-            <video
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => {
-                e.target.currentTime = 0;
-                e.target.pause();
-              }}
-            >
+            <video ref={video} loop>
               <source
                 src={`/pictures/${artWork.name}.${artWork.type}`}
                 type="video/mp4"

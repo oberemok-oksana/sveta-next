@@ -19,7 +19,11 @@ export default function Home() {
       <header className="header">
         <div className="logo">
           <a href="#" className="main-header">
-            Sveta Bilyk
+            <img
+              className="logo-img"
+              src="/pictures/logo.svg"
+              alt="Logo Sveta Bylik"
+            />
           </a>
         </div>
         <ul className="navbar-list">
